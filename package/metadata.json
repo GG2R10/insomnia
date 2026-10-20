@@ -1,0 +1,22 @@
+{
+    "KPlugin": {
+        "Id": "com.github.GG2R10.insomnia",
+        "Name": "Insomnia",
+        "Description": "One-click panel toggle to block sleep and/or screen locking for a set time or indefinitely, without digging into the power management settings.",
+        "Category": "System Information",
+        "Version": "0.1.0",
+        "Icon": "preferences-system-power-management",
+        "EnabledByDefault": true,
+        "License": "GPL-3.0+",
+        "Website": "",
+        "BugReportUrl": "",
+        "Authors": [
+            { "Name": "Conseq", "Email": "" }
+        ],
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ]
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

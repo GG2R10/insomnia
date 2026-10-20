@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile arg="true"/>
+  <group name="General">
+    <!-- Click-button -> target mapping. 0=Sleep, 1=Screen, 2=Both, 3=None.
+         Index order must match ConfigGeneral.qml's combo box and
+         CompactView.qml's button routing. Right click is deliberately not
+         configurable - Plasma reserves it for the applet's context menu. -->
+    <entry name="leftClickTarget" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="middleClickTarget" type="Int">
+      <default>3</default>
+    </entry>
+    <!-- Safety auto-release: minutes after which an activated inhibition
+         turns itself off. 0 = indefinite (stays on until clicked off). -->
+    <entry name="autoExpireMinutes" type="Int">
+      <default>120</default>
+    </entry>
+    <!-- When active, the bolt cycles through the hue wheel instead of the
+         flat boltColor. See CompactView.qml's boltRainbow/hueOffset. -->
+    <entry name="rainbowMode" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+  <group name="Visuals">
+    <!-- Index into anim/AnimationOptions.qml lists (never reorder).
+         animationMode: 0 = static (one transition on activation), 1 = continuous.
+         animationFps : index into fpsValues (12/24/30/60/native); 2 = 30 fps.
+         hoverStyle   : index into hoverPresets; 0 = Pop. -->
+    <entry name="animationMode" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="animationFps" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="hoverStyle" type="Int">
+      <default>0</default>
+    </entry>
+  </group>
+</kcfg>
